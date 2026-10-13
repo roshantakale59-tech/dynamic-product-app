@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Product App</title>
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <header>
+    <h1>Dynamic Product App</h1>
+    
+    <!-- Error display banner -->
+    <div id="error-banner" class="error-banner hidden" aria-live="polite"></div>
+
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Search products..."
+/>
+
+<select id="sortSelect">
+    <option value="default">Sort by: Default</option>
+    <option value="low-high">Price: Low to High</option>
+    <option value="high-low">Price: High to Low</option>
+    <option value="az">Name: A to Z</option>
+</select>
+
+    <nav class="categories" id="categories-nav">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="electronics">Electronics</button>
+      <button class="category-btn" data-category="jewelery">Jewellery</button>
+      <button class="category-btn" data-category="men's clothing">Men's Clothing</button>
+      <button class="category-btn" data-category="women's clothing">Women's Clothing</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="products" class="products-grid"></div>
+  </main>
+
+  <script src="api.js"></script>
+<script src="script.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
